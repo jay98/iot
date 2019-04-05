@@ -19,15 +19,15 @@ def myCallback(cmd):
 
 
 def estimate(l):
-    open = 0
+    op = 0
     close = 0
     for num in l:
         if num == 1:
-            open += 1
+            op += 1
         else:
             close += 1
 
-    if open > close:
+    if op > close:
         print("open")
         myData = {'doorStatus': 'Open'}
         client.publishEvent(
